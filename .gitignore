@@ -1,0 +1,32 @@
+# Build output
+**/target/
+**/build/
+**/out/
+
+# Maven wrapper
+!.mvn/wrapper/maven-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment / secrets
+.env
+.env.*
+*.secret
+
+# MongoDB local data
+**/data/db/
+**/data/db/**
+
+# Temporary files
+*.tmp
+*.swp
