@@ -64,6 +64,37 @@ The above command will build and package the services into a docker container an
 
 Make sure you have the following installed on your machine:
 
+### Start the discovery server
+
+Run the Eureka discovery server before starting the services:
+
+```shell
+cd discovery-server
+mvn spring-boot:run
+```
+
+Then start each service in a separate terminal:
+
+```shell
+cd api-gateway
+./mvnw.cmd spring-boot:run
+```
+
+```shell
+cd product-service
+./mvnw.cmd spring-boot:run
+```
+
+```shell
+cd order-service
+./mvnw.cmd spring-boot:run
+```
+
+```shell
+cd inventory-service
+./mvnw.cmd spring-boot:run
+```
+
 - Java 21
 - Docker
 - Kind Cluster - https://kind.sigs.k8s.io/docs/user/quick-start/#installation

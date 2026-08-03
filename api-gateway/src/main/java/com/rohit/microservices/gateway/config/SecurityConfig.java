@@ -10,7 +10,8 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfig {
 
     private final String[] freeResourceUrls = {"/swagger-ui.html", "/swagger-ui/**", "/v3/api-docs/**",
-                                                "/swagger-resources/**", "/api-docs/**","/aggregate/**"};
+                                                "/swagger-resources/**", "/api-docs/**","/aggregate/**",
+                                                "/actuator/health", "/actuator/health/**", "/actuator/info"};
 
 
     @Bean
