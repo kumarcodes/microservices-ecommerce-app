@@ -22,6 +22,7 @@ public class OrderService {
 
         if (isProductInStock) {
             //Map orderRequest to Order
+
             Order order = new Order();
             order.setOrderNumber(UUID.randomUUID().toString());
             order.setSkuCode(orderRequest.skuCode());
