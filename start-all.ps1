@@ -1,0 +1,1 @@
+Get-ChildItem -Recurse -Filter docker-compose.yml | ForEach-Object { docker compose -f $_.FullName up -d }
