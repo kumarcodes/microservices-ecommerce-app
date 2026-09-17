@@ -38,6 +38,7 @@ public class OrderService {
             orderRepository.save(order);
             //Send the message to Kafka Topic with Order Details(Order Number, Email)
             OrderPlacedEvent orderPlacedEvent = new OrderPlacedEvent(order.getOrderNumber(), orderRequest.userDetails().email());
+            log.info("Start Sending orderPlacedEvent {} to Kafka Topic order-placed",orderPlacedEvent);
             kafkaTemplate.send("order-placed", orderPlacedEvent);
             log.info("Order placed event: {}", orderPlacedEvent);
 
