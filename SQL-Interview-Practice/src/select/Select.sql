@@ -18,3 +18,13 @@ SELECT DISTINCT CATEGORY FROM PRODUCTS;
 
 -- 7. Find orders placed in the last 30 days.
 SELECT * FROM orders WHERE order_date >= CURRENT_DATE-30;
+
+--8 Find products priced between $50 and $200.
+
+SELECT * FROM PRODUCTS WHERE PRICE BETWEEN 50 AND 200;
+
+--9 Sort employees by department, then by salary descending within each department.
+SELECT * FROM EMPLOYEES ORDER BY DEPARTMENT ASC, SALARY DESC;
+
+--10. Rename name column to full name
+SELECT NAME AS "FULL NAME" FROM EMPLOYEES;
