@@ -34,3 +34,4 @@ SELECT * FROM PRODUCTS ORDER BY PRICE DESC LIMIT 3;
 
 --12 Find employees whose name starts with "A"
 SELECT * FROM EMPLOYEES WHERE NAME LIKE 'A%';
+
