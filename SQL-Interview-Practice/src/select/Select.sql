@@ -26,5 +26,11 @@ SELECT * FROM PRODUCTS WHERE PRICE BETWEEN 50 AND 200;
 --9 Sort employees by department, then by salary descending within each department.
 SELECT * FROM EMPLOYEES ORDER BY DEPARTMENT ASC, SALARY DESC;
 
---10. Rename name column to full name
+--10. Rename name column to full name 
 SELECT NAME AS "FULL NAME" FROM EMPLOYEES;
+
+--11 Find the 3 highest-priced products.
+SELECT * FROM PRODUCTS ORDER BY PRICE DESC LIMIT 3;
+
+--12 Find employees whose name starts with "A"
+SELECT * FROM EMPLOYEES WHERE NAME LIKE 'A%';
