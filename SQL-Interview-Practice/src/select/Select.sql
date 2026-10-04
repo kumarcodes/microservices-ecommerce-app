@@ -40,4 +40,7 @@ SELECT NAME, SALARY, SALARY_RANK  FROM (SELECT NAME, SALARY, DENSE_RANK() OVER(O
 
 --14 Top 3 earners in each department
 
-SELECT * FROM(SELECT NAME, SALARY,DEPARTMENT, DENSE_RANK() OVER(PARTITION BY DEPARTMENT ORDER BY SALARY DESC) AS RNK FROM EMPLOYEES) E WHERE RNK <=3 order by department, rnk
+SELECT * FROM(SELECT NAME, SALARY,DEPARTMENT, DENSE_RANK() OVER(PARTITION BY DEPARTMENT ORDER BY SALARY DESC) AS RNK FROM EMPLOYEES) E WHERE RNK <=3 order by department, rnk;
+
+--15 Products which were never ordered
+select * from products where product_id not in(select distinct product_id from order_items);
